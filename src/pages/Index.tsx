@@ -105,22 +105,27 @@ const Index = () => {
               <span className="text-secondary font-bold">Sua transformação começa agora</span>
             </p>
 
-            {/* Visual Carousel */}
-            <div className="mb-8 sm:mb-12 max-w-4xl mx-auto px-2">
-              <Carousel className="w-full">
-                <CarouselContent>
-                  {[1, 2, 3, 4, 5].map((i) => (
-                    <CarouselItem key={i}>
-                      <div className="p-1">
-                        <Card className="border-2 border-primary bg-gradient-to-br from-card to-muted">
-                          <div className="aspect-video flex items-center justify-center">
-                            <div className="text-center p-4 sm:p-8">
-                              <Crown className="w-10 h-10 sm:w-16 sm:h-16 text-primary mx-auto mb-2 sm:mb-4" />
-                              <p className="text-primary font-bold text-sm sm:text-lg">Conteúdo Exclusivo Premium</p>
-                              <p className="text-muted-foreground text-xs sm:text-sm mt-1 sm:mt-2">Acesso Imediato após Pagamento</p>
-                            </div>
-                          </div>
-                        </Card>
+           <Card 
+    className={`
+        border-2 border-primary relative overflow-hidden h-[300px] sm:h-[400px] 
+        bg-[url('/desfocada-${i}.jpg')] bg-cover bg-center
+    `}
+>
+    {/* 1. Camada de Desfoque (z-0) - Aplica o desfoque APENAS na imagem de fundo */}
+    <div className="absolute inset-0 z-0" style={{ filter: 'blur(5px)' }}></div>
+    
+    {/* 2. Camada de Overlay Escuro (z-10) - Preto com 40% de opacidade (bg-black/40) para legibilidade */}
+    <div className="absolute inset-0 bg-black/40 z-10"></div>
+    
+    {/* 3. CONTEÚDO PRINCIPAL (z-20) - O texto legível */}
+    <div className="aspect-video flex items-center justify-center relative z-20 h-full w-full">
+        <div className="text-center p-4 sm:p-8">
+            <Crown className="w-10 h-10 sm:w-16 sm:h-16 text-primary mx-auto mb-2 sm:mb-4" />
+            <p className="text-primary font-bold text-sm sm:text-lg">Conteúdo Exclusivo Premium</p>
+            <p className="text-muted-foreground text-xs sm:text-sm mt-1 sm:mt-2">Acesso Imediato após Pagamento</p>
+        </div>
+    </div>
+</Card>
                       </div>
                     </CarouselItem>
                   ))}
