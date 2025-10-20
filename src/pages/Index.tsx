@@ -104,7 +104,7 @@ const Index = () => {
             {/* Título Principal */}
             <h1 className="text-2xl sm:text-4xl md:text-6xl lg:text-7xl font-black mb-4 sm:mb-6 leading-tight px-2">
               <span className="text-primary block mb-1 sm:mb-2 animate-pulse">Acesso Vitalício Exclusivo</span>
-              <span className="text-foreground block text-xl sm:text-3xl md:text-5xl">à Comunidade de Elite</span>
+              <span className="text-foreground block text-xl sm:text-3xl md:text-5xl">ao Mundo dos Desejos Proibidos</span>
             </h1>
             
             {/* Subtítulo */}
