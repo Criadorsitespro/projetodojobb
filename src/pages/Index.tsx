@@ -101,20 +101,20 @@ const Index = () => {
               ✨ Mais de 18.000 Membros VIP JÁ GARANTIRAM o acesso!
             </div>
             
-            {/* Título Principal */}
+            {/* Título Principal - Alterado */}
             <h1 className="text-2xl sm:text-4xl md:text-6xl lg:text-7xl font-black mb-4 sm:mb-6 leading-tight px-2">
               <span className="text-primary block mb-1 sm:mb-2 animate-pulse">Acesso Vitalício Exclusivo</span>
               <span className="text-foreground block text-xl sm:text-3xl md:text-5xl">ao Mundo dos Desejos Proibidos</span>
             </h1>
             
-            {/* Subtítulo */}
+            {/* Subtítulo - Alterado */}
             <p className="text-base sm:text-xl md:text-2xl text-muted-foreground mb-6 sm:mb-8 max-w-3xl mx-auto px-2">
               A chave para os desejos mais profundos e as fantasias mais ousadas.
               <br className="hidden sm:block" />
               <span className="text-secondary font-bold">Não adie mais o seu prazer.</span>
             </p>
 
-            {/* Carrossel Visual com Imagens, Blur e Overlay (CORRIGIDO) */}
+            {/* Carrossel Visual com Imagens, Blur e Overlay */}
             <div className="mb-8 sm:mb-12 max-w-4xl mx-auto px-2">
               <Carousel className="w-full">
                 <CarouselContent>
@@ -292,11 +292,59 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Rodapé */}
+      {/* Rodapé + Selos de Confiança (COM IMAGENS) - NOVO */}
       <footer className="py-8 sm:py-12 px-3 sm:px-4 md:px-8 border-t-2 border-secondary/30 bg-card/80">
         <div className="container mx-auto max-w-4xl text-center">
-          <p className="text-xs sm:text-sm md:text-base text-muted-foreground leading-relaxed px-2">
-            © 2024 - Todos os direitos reservados | Conteúdo Exclusivo Premium
+
+            {/* Selo de Conteúdo +18 */}
+            <div className="mb-8">
+                <img 
+                    src="/restrito-18.png" // Necessário colocar a imagem restrito-18.png na pasta public
+                    alt="Conteúdo Restrito para Maiores de 18 Anos"
+                    className="mx-auto w-32 sm:w-40 h-auto mb-4" 
+                />
+                <p className="text-primary text-xl sm:text-2xl font-black mb-2">
+                    ACESSOS LIBERADOS PARA MAIORES DE 18 ANOS!
+                </p>
+            </div>
+
+            {/* Prova Social de Membros */}
+            <div className="mb-8">
+                <p className="text-foreground text-lg sm:text-xl font-bold mb-2">
+                    MAIS DE 18.000 MEMBROS VIP JÁ CONFIAM!
+                </p>
+                <div className="flex justify-center items-center gap-2 text-muted-foreground text-sm sm:text-base">
+                    <Users className="w-5 h-5 text-secondary" />
+                    <span>99% de Satisfação Garantida.</span>
+                </div>
+            </div>
+
+            {/* Selos de Pagamento e Segurança */}
+            <div className="mb-8">
+                <h3 className="text-lg sm:text-xl font-bold text-foreground mb-4">
+                    Pague com Segurança, Acesse com Confiança!
+                </h3>
+                {/* Imagem do PagSeguro com bandeiras */}
+                <img 
+                    src="/pagseguro-selo.png" // Necessário colocar a imagem pagseguro-selo.png na pasta public
+                    alt="Pagamento Seguro via PagSeguro e Cartões"
+                    className="mx-auto w-[250px] sm:w-[350px] h-auto mb-4" 
+                />
+                {/* Imagem do "SITE 100% SEGURO" */}
+                <img 
+                    src="/site-seguro-selo.png" // Necessário colocar a imagem site-seguro-selo.png na pasta public
+                    alt="Site 100% Seguro"
+                    className="mx-auto w-[180px] sm:w-[220px] h-auto" 
+                />
+            </div>
+            
+            {/* Disclaimer e Direitos Autorais (Obrigatório) */}
+          <p className="text-xs sm:text-sm md:text-base text-muted-foreground leading-relaxed px-2 border-t pt-4 border-secondary/20">
+              © 2024 - Todos os direitos reservados | Conteúdo Exclusivo Premium
+              <br />
+              Ao adquirir, você confirma ser maior de 18 anos.
+              <br />
+              Termos de Uso e Política de Privacidade disponíveis no checkout.
           </p>
         </div>
       </footer>
