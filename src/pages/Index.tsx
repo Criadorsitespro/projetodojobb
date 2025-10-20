@@ -9,11 +9,11 @@ const PAYMENT_LINK = "https://pay.cakto.com.br/3dca34b_613477";
 
 // ARRAY DE 5 IMAGENS CORRIGIDO
 const IMAGE_FILES = [
-  "image_59e01a.png",
-  "image_58a3ef.png",
-  "image_588d85.png",
-  "image_4cb4db.png",
-  "image_4bdf05.png",
+  "desfocada1.jpg",
+  "desfocada2.jpg",
+  "desfocada3.jpg",
+  "desfocada4.jpg",
+  "desfocada5.jpg",
 ];
 
 const Index = () => {
