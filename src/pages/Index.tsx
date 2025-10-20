@@ -145,7 +145,6 @@ const Index = () => {
                                 </div>
                             </div>
                           </Card>
-                        </div>
                       </CarouselItem>
                     ))}
                   </CarouselContent>
