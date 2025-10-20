@@ -115,7 +115,7 @@ const Index = () => {
                 <span className="text-red-600 font-bold text-2xl sm:text-3xl block mt-2">Sua transformação começa agora</span>
               </p>
 
-              {/* Carrossel Visual */}
+              {/* Carrossel Visual - CORRIGIDO O ERRO DE FECHAMENTO AQUI */}
               <div className="mb-8 sm:mb-12 max-w-4xl mx-auto px-2">
                 <Carousel className="w-full">
                   <CarouselContent>
@@ -145,6 +145,7 @@ const Index = () => {
                                 </div>
                             </div>
                           </Card>
+                        </div> {/* <-- CORREÇÃO: Fechamento do div class="p-1" que estava faltando */}
                       </CarouselItem>
                     ))}
                   </CarouselContent>
@@ -228,7 +229,7 @@ const Index = () => {
                 </Card>
               ))}
             </div>
-          </div>
+            </div>
         </section>
 
         {/* Seção Final de CTA (Repetida) */}
@@ -321,6 +322,17 @@ const Index = () => {
               </div>
             </div>
           </footer>
+
+        {/* NOVO: CTA Fixo para Dispositivos Móveis (Adicionado na resposta anterior) */}
+        <div className="fixed bottom-0 left-0 right-0 z-50 sm:hidden">
+          <Button
+            size="lg"
+            onClick={() => window.location.href = PAYMENT_LINK}
+            className="w-full bg-gradient-to-r from-secondary via-destructive to-secondary text-foreground font-black py-4 text-xl border-t-4 border-primary shadow-2xl animate-pulse uppercase"
+          >
+            🔥 GARANTIR MEU ACESSO AGORA!
+          </Button>
+        </div>
 
         {/* Estilos para Animações (Notificação) */}
         <style>{`
