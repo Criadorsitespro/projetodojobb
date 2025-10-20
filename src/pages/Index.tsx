@@ -37,7 +37,7 @@ const Index = () => {
           return { hours: prev.hours - 1, minutes: 59, seconds: 59 };
         }
         // Se o contador chegar a zero, ele reseta para o valor inicial
-        return { hours: 0, minutes: 59, seconds: 30 }; 
+        return { hours: 0, minutes: 59, seconds: 30 }; 
       });
     }, 1000);
 
@@ -58,15 +58,15 @@ const Index = () => {
       setNotificationText(messages[Math.floor(Math.random() * messages.length)]);
       setShowNotification(true);
       // A notificação desaparece após 5 segundos
-      setTimeout(() => setShowNotification(false), 5000); 
-    }, Math.floor(Math.random() * 30000) + 45000); // 45-75 segundos
+      setTimeout(() => setShowNotification(false), 5000); 
+    }, Math.floor(Math.random() * 15000) + 15000); // 🚨 ALTERADO: Agora entre 15-30 segundos
 
     return () => clearInterval(interval);
   }, []);
 
   return (
     <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
-      
+      
       {/* Notificação de Atividade (Social Proof) */}
       {showNotification && (
         <div className="fixed top-20 right-2 sm:right-4 z-50 animate-slide-in-right max-w-[90vw] sm:max-w-sm">
@@ -89,258 +89,258 @@ const Index = () => {
             </span>
             <Flame className="w-4 h-4 sm:w-5 sm:h-5 text-primary animate-pulse flex-shrink-0" />
           </div>
+          </div>
         </div>
-      </div>
 
-      {/* Seção Principal (Hero Section) */}
-      <section className="pt-20 sm:pt-24 pb-8 sm:pb-12 px-3 sm:px-4 md:px-8 bg-black">
-        <div className="container mx-auto max-w-6xl">
-          <div className="text-center mb-8 sm:mb-12 animate-fade-in">
-            {/* Tag de Destaque */}
-            <div className="inline-block bg-gradient-to-r from-primary to-accent text-primary-foreground px-4 sm:px-6 py-2 rounded-full font-bold text-xs sm:text-sm mb-4 sm:mb-6 animate-pulse max-w-[95vw]">
-              ✨ Mais de 18.000 Membros VIP JÁ GARANTIRAM o acesso!
-            </div>
-            
-            {/* Título Principal (Ajustado) */}
-            <h1 className="text-2xl sm:text-4xl md:text-6xl lg:text-7xl font-black mb-4 sm:mb-6 leading-tight px-2">
-              <span className="text-primary block mb-1 sm:mb-2 animate-pulse">ACESSO VITALÍCIO EXCLUSIVO</span>
-              {/* Usa o novo texto da imagem image_4af621.png */}
-              <span className="text-yellow-500 block text-xl sm:text-3xl md:text-5xl">à Comunidade de Elite</span>
-            </h1>
-            
-            {/* Subtítulo (Ajustado com novo texto) */}
-            <p className="text-base sm:text-xl md:text-2xl text-muted-foreground mb-6 sm:mb-8 max-w-3xl mx-auto px-2">
-              Não perca a chance de entrar no grupo mais seletivo e com mais crescimento.
-              <br />
-              <span className="text-red-600 font-bold text-2xl sm:text-3xl block mt-2">Sua transformação começa agora</span>
-            </p>
-
-            {/* Carrossel Visual */}
-            <div className="mb-8 sm:mb-12 max-w-4xl mx-auto px-2">
-              <Carousel className="w-full">
-                <CarouselContent>
-                  {/* Itera de 1 a 5, referenciando 'desfocadaN.jpg' */}
-                  {[1, 2, 3, 4, 5].map((i) => (
-                    <CarouselItem key={i}>
-                      <div className="p-1">
-                        <Card 
-                          className="border-4 border-yellow-500 bg-black relative overflow-hidden h-[300px] sm:h-[400px] bg-cover bg-center"
-                          style={{ 
-                                // O carrossel exibe o conteúdo desfocado com borda amarela
-                                backgroundImage: `url('/desfocada${i}.jpg')` 
-                            }} 
-                        >
-                          {/* 1. Camada de Desfoque (Blur) */}
-                          <div className="absolute inset-0 z-0" style={{ filter: 'blur(5px)' }}></div>
-                          
-                          {/* 2. Camada de Overlay Escuro */}
-                          <div className="absolute inset-0 bg-black/70 z-10"></div>
-                          
-                          {/* 3. CONTEÚDO PRINCIPAL (Texto e Ícone) */}
-                          <div className="aspect-video flex items-center justify-center relative z-20 h-full w-full">
-                              <div className="text-center p-4 sm:p-8">
-                                  <Crown className="w-10 h-10 sm:w-16 sm:h-16 text-yellow-500 mx-auto mb-2 sm:mb-4" />
-                                  <p className="text-yellow-500 font-bold text-lg sm:text-xl">Conteúdo Exclusivo Premium</p>
-                                  <p className="text-muted-foreground text-xs sm:text-sm mt-1 sm:mt-2">Acesso Imediato após Pagamento</p>
-                              </div>
-                          </div>
-                        </Card>
-                      </div>
-                    </CarouselItem>
-                  ))}
-                </CarouselContent>
-                <CarouselPrevious className="border-yellow-500 text-yellow-500 left-0 sm:left-2" />
-                <CarouselNext className="border-yellow-500 text-yellow-500 right-0 sm:right-2" />
-              </Carousel>
-            </div>
-
-            {/* Preço */}
-            <div className="mb-6 sm:mb-8 px-2">
-              <div className="text-muted-foreground text-lg sm:text-2xl mb-2">
-                <span className="line-through">De: R$297,00</span>
+        {/* Seção Principal (Hero Section) */}
+        <section className="pt-20 sm:pt-24 pb-8 sm:pb-12 px-3 sm:px-4 md:px-8 bg-black">
+          <div className="container mx-auto max-w-6xl">
+            <div className="text-center mb-8 sm:mb-12 animate-fade-in">
+              {/* Tag de Destaque */}
+              <div className="inline-block bg-gradient-to-r from-primary to-accent text-primary-foreground px-4 sm:px-6 py-2 rounded-full font-bold text-xs sm:text-sm mb-4 sm:mb-6 animate-pulse max-w-[95vw]">
+                ✨ Mais de 18.000 Membros VIP JÁ GARANTIRAM o acesso!
               </div>
-              <div className="text-4xl sm:text-6xl md:text-8xl font-black text-primary animate-pulse mb-3 sm:mb-4">
-                R$29,90
+              
+              {/* Título Principal (Ajustado) */}
+              <h1 className="text-2xl sm:text-4xl md:text-6xl lg:text-7xl font-black mb-4 sm:mb-6 leading-tight px-2">
+                <span className="text-primary block mb-1 sm:mb-2 animate-pulse">ACESSO VITALÍCIO EXCLUSIVO</span>
+                {/* Usa o novo texto da imagem image_4af621.png */}
+                <span className="text-yellow-500 block text-xl sm:text-3xl md:text-5xl">à Comunidade de Elite</span>
+              </h1>
+              
+              {/* Subtítulo (Ajustado com novo texto) */}
+              <p className="text-base sm:text-xl md:text-2xl text-muted-foreground mb-6 sm:mb-8 max-w-3xl mx-auto px-2">
+                Não perca a chance de entrar no grupo mais seletivo e com mais crescimento.
+                <br />
+                <span className="text-red-600 font-bold text-2xl sm:text-3xl block mt-2">Sua transformação começa agora</span>
+              </p>
+
+              {/* Carrossel Visual */}
+              <div className="mb-8 sm:mb-12 max-w-4xl mx-auto px-2">
+                <Carousel className="w-full">
+                  <CarouselContent>
+                    {/* Itera de 1 a 5, referenciando 'desfocadaN.jpg' */}
+                    {[1, 2, 3, 4, 5].map((i) => (
+                      <CarouselItem key={i}>
+                        <div className="p-1">
+                          <Card 
+                            className="border-4 border-yellow-500 bg-black relative overflow-hidden h-[300px] sm:h-[400px] bg-cover bg-center"
+                            style={{ 
+                                  // O carrossel exibe o conteúdo desfocado com borda amarela
+                                  backgroundImage: `url('/desfocada${i}.jpg')` 
+                              }} 
+                          >
+                            {/* 1. Camada de Desfoque (Blur) */}
+                            <div className="absolute inset-0 z-0" style={{ filter: 'blur(5px)' }}></div>
+                            
+                            {/* 2. Camada de Overlay Escuro */}
+                            <div className="absolute inset-0 bg-black/70 z-10"></div>
+                            
+                            {/* 3. CONTEÚDO PRINCIPAL (Texto e Ícone) */}
+                            <div className="aspect-video flex items-center justify-center relative z-20 h-full w-full">
+                                <div className="text-center p-4 sm:p-8">
+                                    <Crown className="w-10 h-10 sm:w-16 sm:h-16 text-yellow-500 mx-auto mb-2 sm:mb-4" />
+                                    <p className="text-yellow-500 font-bold text-lg sm:text-xl">Conteúdo Exclusivo Premium</p>
+                                    <p className="text-muted-foreground text-xs sm:text-sm mt-1 sm:mt-2">Acesso Imediato após Pagamento</p>
+                                </div>
+                            </div>
+                          </Card>
+                        </div>
+                      </CarouselItem>
+                    ))}
+                  </CarouselContent>
+                  <CarouselPrevious className="border-yellow-500 text-yellow-500 left-0 sm:left-2" />
+                  <CarouselNext className="border-yellow-500 text-yellow-500 right-0 sm:right-2" />
+                </Carousel>
               </div>
-              <div className="text-secondary text-base sm:text-xl font-bold animate-bounce">
-                💣 Promoção Relâmpago – O tempo está acabando!
+
+              {/* Preço */}
+              <div className="mb-6 sm:mb-8 px-2">
+                <div className="text-muted-foreground text-lg sm:text-2xl mb-2">
+                  <span className="line-through">De: R$297,00</span>
+                </div>
+                <div className="text-4xl sm:text-6xl md:text-8xl font-black text-primary animate-pulse mb-3 sm:mb-4">
+                  R$29,90
+                </div>
+                <div className="text-secondary text-base sm:text-xl font-bold animate-bounce">
+                  💣 Promoção Relâmpago – O tempo está acabando!
+                </div>
+              </div>
+
+              {/* Caixa de Urgência (Contador) */}
+              <Card className="inline-block bg-secondary/50 border-2 border-primary p-4 sm:p-6 mb-6 sm:mb-8 backdrop-blur-sm max-w-[95vw]">
+                <div className="text-primary text-base sm:text-lg font-bold mb-2">⏰ Oferta expira em:</div>
+                <div className="text-3xl sm:text-4xl md:text-5xl font-mono text-foreground font-black tracking-wider">
+                  {String(timeLeft.hours).padStart(2, '0')}:{String(timeLeft.minutes).padStart(2, '0')}:{String(timeLeft.seconds).padStart(2, '0')}
+                </div>
+              </Card>
+
+              {/* CTA Principal */}
+              <div className="mb-4 px-2">
+                <Button
+                  size="lg"
+                  onClick={() => window.location.href = PAYMENT_LINK}
+                  className="bg-gradient-to-r from-secondary via-destructive to-secondary hover:from-destructive hover:via-secondary hover:to-destructive text-foreground font-black py-4 sm:py-6 md:py-8 px-6 sm:px-10 md:px-12 text-base sm:text-xl md:text-2xl lg:text-3xl border-2 sm:border-4 border-primary shadow-2xl hover:scale-105 transition-all duration-300 animate-pulse uppercase w-full sm:w-auto max-w-full"
+                >
+                  🔥 QUERO MEU ACESSO AGORA!
+                </Button>
+              </div>
+              <div className="text-xs sm:text-sm text-muted-foreground px-2">
+                <Lock className="inline w-3 h-3 sm:w-4 sm:h-4 mr-1" />
+                Pagamento 100% seguro e discreto
               </div>
             </div>
+          </div>
+        </section>
 
-            {/* Caixa de Urgência (Contador) */}
-            <Card className="inline-block bg-secondary/50 border-2 border-primary p-4 sm:p-6 mb-6 sm:mb-8 backdrop-blur-sm max-w-[95vw]">
-              <div className="text-primary text-base sm:text-lg font-bold mb-2">⏰ Oferta expira em:</div>
-              <div className="text-3xl sm:text-4xl md:text-5xl font-mono text-foreground font-black tracking-wider">
-                {String(timeLeft.hours).padStart(2, '0')}:{String(timeLeft.minutes).padStart(2, '0')}:{String(timeLeft.seconds).padStart(2, '0')}
+        {/* Seção de Benefícios */}
+        <section className="py-12 sm:py-16 md:py-20 px-3 sm:px-4 md:px-8 bg-muted/30">
+          <div className="container mx-auto max-w-7xl">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-center text-foreground mb-8 sm:mb-12 md:mb-16 px-2">
+              🔥 O que você vai encontrar:
+            </h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 md:gap-8">
+              {[
+                {
+                  icon: Zap,
+                  title: "Material Exclusivo",
+                  description: "Conteúdo novo e impactante produzido diariamente"
+                },
+                {
+                  icon: Crown,
+                  title: "Acesso Vitalício",
+                  description: "Pague uma única vez e tenha acesso ilimitado para sempre"
+                },
+                {
+                  icon: Star,
+                  title: "100% Exclusivo",
+                  description: "Descubra o que você não encontra em nenhum outro lugar"
+                },
+                {
+                  icon: Shield,
+                  title: "Sigilo Total",
+                  description: "Sua identidade protegida com total discrição"
+                }
+              ].map((benefit, idx) => (
+                <Card key={idx} className="bg-card border-2 border-secondary/50 p-4 sm:p-6 md:p-8 text-center hover:scale-105 hover:border-primary transition-all duration-500 backdrop-blur-sm">
+                  <benefit.icon className="w-10 h-10 sm:w-12 sm:h-12 md:w-16 md:h-16 text-primary mx-auto mb-3 sm:mb-4 md:mb-6" />
+                  <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-foreground mb-2 sm:mb-3 md:mb-4">{benefit.title}</h3>
+                  <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">{benefit.description}</p>
+                </Card>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Seção Final de CTA (Repetida) */}
+        <section className="py-12 sm:py-16 md:py-20 px-3 sm:px-4 md:px-8">
+          <div className="container mx-auto max-w-5xl">
+            <Card className="bg-gradient-to-r from-secondary/40 via-card to-secondary/40 p-6 sm:p-8 md:p-12 border-2 sm:border-4 border-primary/70 backdrop-blur-sm text-center">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-6xl font-black text-foreground mb-6 sm:mb-8 leading-tight px-2">
+                ✨ Essa oferta exclusiva de{" "}
+                <span className="text-primary">R$29,90</span>{" "}
+                não vai durar para sempre!
+              </h2>
+              <p className="text-base sm:text-xl md:text-2xl lg:text-3xl text-muted-foreground mb-8 sm:mb-10 md:mb-12 leading-relaxed px-2">
+                💋 Clique no botão agora e garanta seu lugar.
+                <br />
+                <span className="text-secondary font-bold">Te espero lá dentro!</span> 😏
+              </p>
+              <div className="mb-6 sm:mb-8 px-2">
+                <Button
+                  size="lg"
+                  onClick={() => window.location.href = PAYMENT_LINK}
+                  className="bg-gradient-to-r from-secondary via-destructive to-secondary hover:from-destructive hover:via-secondary hover:to-destructive text-foreground font-black py-4 sm:py-6 md:py-8 px-8 sm:px-12 md:px-16 text-lg sm:text-2xl md:text-3xl lg:text-4xl border-2 sm:border-4 border-primary shadow-2xl hover:scale-110 transition-all duration-300 animate-pulse uppercase w-full sm:w-auto max-w-full"
+                >
+                  🔥 GARANTIR MEU ACESSO AGORA!
+                </Button>
+              </div>
+              <div className="text-sm sm:text-base md:text-lg text-muted-foreground px-2">
+                <Lock className="inline w-4 h-4 sm:w-5 sm:h-5 mr-1 sm:mr-2" />
+                Pagamento 100% seguro e discreto | 💎 Acesso imediato
               </div>
             </Card>
-
-            {/* CTA Principal */}
-            <div className="mb-4 px-2">
-              <Button
-                size="lg"
-                onClick={() => window.location.href = PAYMENT_LINK}
-                className="bg-gradient-to-r from-secondary via-destructive to-secondary hover:from-destructive hover:via-secondary hover:to-destructive text-foreground font-black py-4 sm:py-6 md:py-8 px-6 sm:px-10 md:px-12 text-base sm:text-xl md:text-2xl lg:text-3xl border-2 sm:border-4 border-primary shadow-2xl hover:scale-105 transition-all duration-300 animate-pulse uppercase w-full sm:w-auto max-w-full"
-              >
-                🔥 QUERO MEU ACESSO AGORA!
-              </Button>
-            </div>
-            <div className="text-xs sm:text-sm text-muted-foreground px-2">
-              <Lock className="inline w-3 h-3 sm:w-4 sm:h-4 mr-1" />
-              Pagamento 100% seguro e discreto
-            </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Seção de Benefícios */}
-      <section className="py-12 sm:py-16 md:py-20 px-3 sm:px-4 md:px-8 bg-muted/30">
-        <div className="container mx-auto max-w-7xl">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-center text-foreground mb-8 sm:mb-12 md:mb-16 px-2">
-            🔥 O que você vai encontrar:
-          </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 md:gap-8">
-            {[
-              {
-                icon: Zap,
-                title: "Material Exclusivo",
-                description: "Conteúdo novo e impactante produzido diariamente"
-              },
-              {
-                icon: Crown,
-                title: "Acesso Vitalício",
-                description: "Pague uma única vez e tenha acesso ilimitado para sempre"
-              },
-              {
-                icon: Star,
-                title: "100% Exclusivo",
-                description: "Descubra o que você não encontra em nenhum outro lugar"
-              },
-              {
-                icon: Shield,
-                title: "Sigilo Total",
-                description: "Sua identidade protegida com total discrição"
-              }
-            ].map((benefit, idx) => (
-              <Card key={idx} className="bg-card border-2 border-secondary/50 p-4 sm:p-6 md:p-8 text-center hover:scale-105 hover:border-primary transition-all duration-500 backdrop-blur-sm">
-                <benefit.icon className="w-10 h-10 sm:w-12 sm:h-12 md:w-16 md:h-16 text-primary mx-auto mb-3 sm:mb-4 md:mb-6" />
-                <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-foreground mb-2 sm:mb-3 md:mb-4">{benefit.title}</h3>
-                <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">{benefit.description}</p>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
+        {/* Rodapé + Selos de Confiança (VISUAL MINIMALISTA/COMPACTO) */}
+        <footer className="py-6 sm:py-8 px-3 sm:px-4 md:px-8 bg-black">
+          <div className="container mx-auto max-w-4xl text-center">
 
-      {/* Seção Final de CTA (Repetida) */}
-      <section className="py-12 sm:py-16 md:py-20 px-3 sm:px-4 md:px-8">
-        <div className="container mx-auto max-w-5xl">
-          <Card className="bg-gradient-to-r from-secondary/40 via-card to-secondary/40 p-6 sm:p-8 md:p-12 border-2 sm:border-4 border-primary/70 backdrop-blur-sm text-center">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-6xl font-black text-foreground mb-6 sm:mb-8 leading-tight px-2">
-              ✨ Essa oferta exclusiva de{" "}
-              <span className="text-primary">R$29,90</span>{" "}
-              não vai durar para sempre!
-            </h2> // TAG CORRIGIDA AQUI
-            <p className="text-base sm:text-xl md:text-2xl lg:text-3xl text-muted-foreground mb-8 sm:mb-10 md:mb-12 leading-relaxed px-2">
-              💋 Clique no botão agora e garanta seu lugar.
-              <br />
-              <span className="text-secondary font-bold">Te espero lá dentro!</span> 😏
-            </p>
-            <div className="mb-6 sm:mb-8 px-2">
-              <Button
-                size="lg"
-                onClick={() => window.location.href = PAYMENT_LINK}
-                className="bg-gradient-to-r from-secondary via-destructive to-secondary hover:from-destructive hover:via-secondary hover:to-destructive text-foreground font-black py-4 sm:py-6 md:py-8 px-8 sm:px-12 md:px-16 text-lg sm:text-2xl md:text-3xl lg:text-4xl border-2 sm:border-4 border-primary shadow-2xl hover:scale-110 transition-all duration-300 animate-pulse uppercase w-full sm:w-auto max-w-full"
-              >
-                🔥 GARANTIR MEU ACESSO AGORA!
-              </Button>
+              {/* Selo de Conteúdo +18 e Título */}
+              <div className="mb-6 sm:mb-8">
+                  {/* CORREÇÃO: Usando a extensão .jpg para o arquivo restrito-18.jpg */}
+                  <img 
+                      src="/restrito-18.jpg" 
+                      alt="Conteúdo Restrito para Maiores de 18 Anos"
+                      className="mx-auto w-12 h-12 mb-2" 
+                  />
+                  <p className="text-yellow-500 text-xl sm:text-2xl font-black mb-2">
+                      ACESSOS LIBERADOS PARA MAIORES DE 18 ANOS!
+                  </p>
+              </div>
+
+              {/* Prova Social de Membros */}
+              <div className="mb-6 sm:mb-8 text-white">
+                  <p className="text-lg sm:text-xl font-bold mb-2">
+                      MAIS DE 18.000 MEMBROS VIP JÁ CONFIAM!
+                  </p>
+                  <div className="flex justify-center items-center gap-2 text-gray-400 text-sm sm:text-base">
+                      <Users className="w-5 h-5 text-red-600" />
+                      <span>99% de Satisfação Garantida.</span>
+                  </div>
+              </div>
+
+              {/* Selos de Pagamento e Segurança */}
+              <div className="mb-6 sm:mb-8">
+                  <h3 className="text-lg sm:text-xl font-bold text-white mb-4">
+                      Pague com Segurança, Acesse com Confiança!
+                  </h3>
+                  <div className="flex flex-col items-center justify-center gap-4">
+                      {/* Usando 'comprasegura.png' */}
+                      <img 
+                          src="/comprasegura.png" 
+                          alt="Compra 100% Segura"
+                          className="w-[250px] sm:w-[350px] h-auto" 
+                      />
+                      {/* Imagem do "SITE 100% SEGURO" (selo_site_seguro.png) */}
+                      <img 
+                          src="/selo_site_seguro.png" 
+                          alt="Site 100% Seguro SSL"
+                          className="w-[180px] sm:w-[220px] h-auto mt-4" 
+                      />
+                  </div>
+              </div>
+              
+              {/* Direitos Autorais e Disclaimers */}
+              <div className="border-t pt-4 border-red-800">
+                  <p className="text-xs sm:text-sm text-gray-400 leading-relaxed px-2">
+                      © 2024 - Todos os direitos reservados | Conteúdo Exclusivo Premium
+                      <br />
+                      Termos de Uso e Política de Privacidade disponíveis no checkout.
+                  </p>
+              </div>
             </div>
-            <div className="text-sm sm:text-base md:text-lg text-muted-foreground px-2">
-              <Lock className="inline w-4 h-4 sm:w-5 sm:h-5 mr-1 sm:mr-2" />
-              Pagamento 100% seguro e discreto | 💎 Acesso imediato
-            </div>
-          </Card>
-        </div>
-      </section>
+          </footer>
 
-      {/* Rodapé + Selos de Confiança (VISUAL MINIMALISTA/COMPACTO) */}
-      <footer className="py-6 sm:py-8 px-3 sm:px-4 md:px-8 bg-black">
-        <div className="container mx-auto max-w-4xl text-center">
-
-            {/* Selo de Conteúdo +18 e Título */}
-            <div className="mb-6 sm:mb-8">
-                {/* CORREÇÃO: Usando a extensão .jpg para o arquivo restrito-18.jpg */}
-                <img 
-                    src="/restrito-18.jpg" 
-                    alt="Conteúdo Restrito para Maiores de 18 Anos"
-                    className="mx-auto w-12 h-12 mb-2" 
-                />
-                <p className="text-yellow-500 text-xl sm:text-2xl font-black mb-2">
-                    ACESSOS LIBERADOS PARA MAIORES DE 18 ANOS!
-                </p>
-            </div>
-
-            {/* Prova Social de Membros */}
-            <div className="mb-6 sm:mb-8 text-white">
-                <p className="text-lg sm:text-xl font-bold mb-2">
-                    MAIS DE 18.000 MEMBROS VIP JÁ CONFIAM!
-                </p>
-                <div className="flex justify-center items-center gap-2 text-gray-400 text-sm sm:text-base">
-                    <Users className="w-5 h-5 text-red-600" />
-                    <span>99% de Satisfação Garantida.</span>
-                </div>
-            </div>
-
-            {/* Selos de Pagamento e Segurança */}
-            <div className="mb-6 sm:mb-8">
-                <h3 className="text-lg sm:text-xl font-bold text-white mb-4">
-                    Pague com Segurança, Acesse com Confiança!
-                </h3>
-                <div className="flex flex-col items-center justify-center gap-4">
-                    {/* Usando 'comprasegura.png' */}
-                    <img 
-                        src="/comprasegura.png" 
-                        alt="Compra 100% Segura"
-                        className="w-[250px] sm:w-[350px] h-auto" 
-                    />
-                    {/* Imagem do "SITE 100% SEGURO" (selo_site_seguro.png) */}
-                    <img 
-                        src="/selo_site_seguro.png" 
-                        alt="Site 100% Seguro SSL"
-                        className="w-[180px] sm:w-[220px] h-auto mt-4" 
-                    />
-                </div>
-            </div>
-            
-            {/* Direitos Autorais e Disclaimers */}
-            <div className="border-t pt-4 border-red-800">
-                <p className="text-xs sm:text-sm text-gray-400 leading-relaxed px-2">
-                  © 2024 - Todos os direitos reservados | Conteúdo Exclusivo Premium
-                  <br />
-                  Termos de Uso e Política de Privacidade disponíveis no checkout.
-                </p>
-            </div>
-        </div>
-      </footer>
-
-      {/* Estilos para Animações (Notificação) */}
-      <style>{`
-        @keyframes slide-in-right {
-          from {
-            transform: translateX(100%);
-            opacity: 0;
+        {/* Estilos para Animações (Notificação) */}
+        <style>{`
+          @keyframes slide-in-right {
+            from {
+              transform: translateX(100%);
+              opacity: 0;
+            }
+            to {
+              transform: translateX(0);
+              opacity: 1;
+            }
           }
-          to {
-            transform: translateX(0);
-            opacity: 1;
+          .animate-slide-in-right {
+            animation: slide-in-right 0.5s ease-out;
           }
-        }
-        .animate-slide-in-right {
-          animation: slide-in-right 0.5s ease-out;
-        }
-      `}</style>
-    </div>
-  );
+        `}</style>
+      </div>
+    );
 };
 
 export default Index;
