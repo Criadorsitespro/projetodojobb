@@ -90,7 +90,7 @@ const Index = () => {
             <Flame className="w-4 h-4 sm:w-5 sm:h-5 text-primary animate-pulse flex-shrink-0" />
           </div>
         </div>
-      </div>
+        </div>
 
       {/* Seção Principal (Hero Section) */}
       <section className="pt-20 sm:pt-24 pb-8 sm:pb-12 px-3 sm:px-4 md:px-8 bg-black">
@@ -106,7 +106,7 @@ const Index = () => {
               <span className="text-primary block mb-1 sm:mb-2 animate-pulse">ACESSO VITALÍCIO EXCLUSIVO</span>
               {/* Usa o novo texto da imagem image_4af621.png */}
               <span className="text-yellow-500 block text-xl sm:text-3xl md:text-5xl">à Comunidade de Elite</span>
-            </h1>
+            </span>
             
             {/* Subtítulo (Ajustado com novo texto) */}
             <p className="text-base sm:text-xl md:text-2xl text-muted-foreground mb-6 sm:mb-8 max-w-3xl mx-auto px-2">
@@ -240,7 +240,7 @@ const Index = () => {
               ✨ Essa oferta exclusiva de{" "}
               <span className="text-primary">R$29,90</span>{" "}
               não vai durar para sempre!
-            </h2>
+            </b>
             <p className="text-base sm:text-xl md:text-2xl lg:text-3xl text-muted-foreground mb-8 sm:mb-10 md:mb-12 leading-relaxed px-2">
               💋 Clique no botão agora e garanta seu lugar.
               <br />
@@ -297,10 +297,10 @@ const Index = () => {
                     Pague com Segurança, Acesse com Confiança!
                 </h3>
                 <div className="flex flex-col items-center justify-center gap-4">
-                    {/* Imagem do PagSeguro (download (4).jpg) */}
+                    {/* Alterado para 'comprasegura.png' */}
                     <img 
-                        src="/download (4).jpg" 
-                        alt="Sua Compra Protegida PagSeguro"
+                        src="/comprasegura.png" 
+                        alt="Compra 100% Segura"
                         className="w-[250px] sm:w-[350px] h-auto" 
                     />
                     {/* Imagem do "SITE 100% SEGURO" (selo_site_seguro.png) */}
