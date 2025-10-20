@@ -109,9 +109,9 @@ const Index = () => {
             
             {/* Subtítulo */}
             <p className="text-base sm:text-xl md:text-2xl text-muted-foreground mb-6 sm:mb-8 max-w-3xl mx-auto px-2">
-              Não perca a chance de entrar no grupo mais seletivo e com mais crescimento.
+              A chave para os desejos mais profundos e as fantasias mais ousadas.
               <br className="hidden sm:block" />
-              <span className="text-secondary font-bold">Sua transformação começa agora</span>
+              <span className="text-secondary font-bold">Não adie mais o seu prazer.</span>
             </p>
 
             {/* Carrossel Visual com Imagens, Blur e Overlay (CORRIGIDO) */}
