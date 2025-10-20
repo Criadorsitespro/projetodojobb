@@ -93,7 +93,7 @@ const Index = () => {
       </div>
 
       {/* Seção Principal (Hero Section) */}
-      <section className="pt-20 sm:pt-24 pb-8 sm:pb-12 px-3 sm:px-4 md:px-8">
+      <section className="pt-20 sm:pt-24 pb-8 sm:pb-12 px-3 sm:px-4 md:px-8 bg-black">
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-8 sm:mb-12 animate-fade-in">
             {/* Tag de Destaque */}
@@ -101,20 +101,21 @@ const Index = () => {
               ✨ Mais de 18.000 Membros VIP JÁ GARANTIRAM o acesso!
             </div>
             
-            {/* Título Principal */}
+            {/* Título Principal (Ajustado) */}
             <h1 className="text-2xl sm:text-4xl md:text-6xl lg:text-7xl font-black mb-4 sm:mb-6 leading-tight px-2">
-              <span className="text-primary block mb-1 sm:mb-2 animate-pulse">Acesso Vitalício Exclusivo</span>
-              <span className="text-foreground block text-xl sm:text-3xl md:text-5xl">ao Mundo dos Desejos Proibidos</span>
+              <span className="text-primary block mb-1 sm:mb-2 animate-pulse">ACESSO VITALÍCIO EXCLUSIVO</span>
+              {/* Usa o novo texto da imagem image_4af621.png */}
+              <span className="text-yellow-500 block text-xl sm:text-3xl md:text-5xl">à Comunidade de Elite</span>
             </h1>
             
-            {/* Subtítulo (Frase alterada) */}
+            {/* Subtítulo (Ajustado com novo texto) */}
             <p className="text-base sm:text-xl md:text-2xl text-muted-foreground mb-6 sm:mb-8 max-w-3xl mx-auto px-2">
-              A chave para os desejos mais profundos e as fantasias mais ousadas.
-              <br className="hidden sm:block" />
-              <span className="text-secondary font-bold">Não adie mais o seu prazer.</span>
+              Não perca a chance de entrar no grupo mais seletivo e com mais crescimento.
+              <br />
+              <span className="text-red-600 font-bold text-2xl sm:text-3xl block mt-2">Sua transformação começa agora</span>
             </p>
 
-            {/* Carrossel Visual com Imagens, Blur e Overlay */}
+            {/* Carrossel Visual */}
             <div className="mb-8 sm:mb-12 max-w-4xl mx-auto px-2">
               <Carousel className="w-full">
                 <CarouselContent>
@@ -123,8 +124,9 @@ const Index = () => {
                     <CarouselItem key={i}>
                       <div className="p-1">
                         <Card 
-                          className="border-2 border-primary relative overflow-hidden h-[300px] sm:h-[400px] bg-cover bg-center"
+                          className="border-4 border-yellow-500 bg-black relative overflow-hidden h-[300px] sm:h-[400px] bg-cover bg-center"
                           style={{ 
+                                // O carrossel exibe o conteúdo desfocado com borda amarela
                                 backgroundImage: `url('/desfocada${i}.jpg')` 
                             }} 
                         >
@@ -132,13 +134,13 @@ const Index = () => {
                           <div className="absolute inset-0 z-0" style={{ filter: 'blur(5px)' }}></div>
                           
                           {/* 2. Camada de Overlay Escuro */}
-                          <div className="absolute inset-0 bg-black/40 z-10"></div>
+                          <div className="absolute inset-0 bg-black/70 z-10"></div>
                           
                           {/* 3. CONTEÚDO PRINCIPAL (Texto e Ícone) */}
                           <div className="aspect-video flex items-center justify-center relative z-20 h-full w-full">
                               <div className="text-center p-4 sm:p-8">
-                                  <Crown className="w-10 h-10 sm:w-16 sm:h-16 text-primary mx-auto mb-2 sm:mb-4" />
-                                  <p className="text-primary font-bold text-sm sm:text-lg">Conteúdo Exclusivo Premium</p>
+                                  <Crown className="w-10 h-10 sm:w-16 sm:h-16 text-yellow-500 mx-auto mb-2 sm:mb-4" />
+                                  <p className="text-yellow-500 font-bold text-lg sm:text-xl">Conteúdo Exclusivo Premium</p>
                                   <p className="text-muted-foreground text-xs sm:text-sm mt-1 sm:mt-2">Acesso Imediato após Pagamento</p>
                               </div>
                           </div>
@@ -147,8 +149,8 @@ const Index = () => {
                     </CarouselItem>
                   ))}
                 </CarouselContent>
-                <CarouselPrevious className="border-primary left-0 sm:left-2" />
-                <CarouselNext className="border-primary right-0 sm:right-2" />
+                <CarouselPrevious className="border-yellow-500 text-yellow-500 left-0 sm:left-2" />
+                <CarouselNext className="border-yellow-500 text-yellow-500 right-0 sm:right-2" />
               </Carousel>
             </div>
 
@@ -230,38 +232,7 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Seção de Depoimentos */}
-      <section className="py-12 sm:py-16 md:py-20 px-3 sm:px-4 md:px-8">
-        <div className="container mx-auto max-w-6xl">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-center text-foreground mb-8 sm:mb-12 md:mb-16 px-2">
-            💬 Depoimentos Reais:
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
-            {[
-              {
-                text: "Simplesmente viciante! O acesso vitalício foi o melhor investimento.",
-                author: "J.S., membro VIP"
-              },
-              {
-                text: "A qualidade é impecável e o sigilo me dá total conforto. Recomendo demais!",
-                author: "L.M., assinante"
-              },
-              {
-                text: "Estava buscando algo diferente e encontrei um paraíso. O valor é irrisório!",
-                author: "F.R., fã fiel"
-              }
-            ].map((testimonial, idx) => (
-              <Card key={idx} className="bg-card border-2 border-primary/50 p-4 sm:p-6 md:p-8 backdrop-blur-sm">
-                <div className="text-primary mb-3 sm:mb-4 text-xl sm:text-2xl">⭐⭐⭐⭐⭐</div>
-                <p className="text-muted-foreground mb-4 sm:mb-6 text-sm sm:text-base md:text-lg leading-relaxed italic">"{testimonial.text}"</p>
-                <div className="text-secondary font-bold text-sm sm:text-base">{testimonial.author}</div>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Seção Final de CTA */}
+      {/* Seção Final de CTA (Repetida) */}
       <section className="py-12 sm:py-16 md:py-20 px-3 sm:px-4 md:px-8">
         <div className="container mx-auto max-w-5xl">
           <Card className="bg-gradient-to-r from-secondary/40 via-card to-secondary/40 p-6 sm:p-8 md:p-12 border-2 sm:border-4 border-primary/70 backdrop-blur-sm text-center">
@@ -292,15 +263,15 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Rodapé + Selos de Confiança (VISUAL MINIMALISTA/COMPACTO) - AQUI ESTÁ A MUDANÇA FINAL */}
+      {/* Rodapé + Selos de Confiança (VISUAL MINIMALISTA/COMPACTO) */}
       <footer className="py-6 sm:py-8 px-3 sm:px-4 md:px-8 bg-black">
         <div className="container mx-auto max-w-4xl text-center">
 
             {/* Selo de Conteúdo +18 e Título */}
             <div className="mb-6 sm:mb-8">
-                {/* Imagem de Conteúdo Restrito */}
+                {/* CORREÇÃO: Usando a extensão .jpg para o arquivo restrito-18.jpg */}
                 <img 
-                    src="/restrito-18.png" // Certifique-se que o ícone está na pasta public
+                    src="/restrito-18.jpg" 
                     alt="Conteúdo Restrito para Maiores de 18 Anos"
                     className="mx-auto w-12 h-12 mb-2" 
                 />
@@ -328,13 +299,13 @@ const Index = () => {
                 <div className="flex flex-col items-center justify-center gap-4">
                     {/* Imagem do PagSeguro (download (4).jpg) */}
                     <img 
-                        src="/download (4).jpg" // Nome do arquivo original
+                        src="/download (4).jpg" 
                         alt="Sua Compra Protegida PagSeguro"
                         className="w-[250px] sm:w-[350px] h-auto" 
                     />
                     {/* Imagem do "SITE 100% SEGURO" (selo_site_seguro.png) */}
                     <img 
-                        src="/selo_site_seguro.png" // Nome do arquivo original
+                        src="/selo_site_seguro.png" 
                         alt="Site 100% Seguro SSL"
                         className="w-[180px] sm:w-[220px] h-auto mt-4" 
                     />
