@@ -105,14 +105,14 @@ const Index = () => {
               <h1 className="text-2xl sm:text-4xl md:text-6xl lg:text-7xl font-black mb-4 sm:mb-6 leading-tight px-2">
                 <span className="text-primary block mb-1 sm:mb-2 animate-pulse">ACESSO VITALÍCIO EXCLUSIVO</span>
                 {/* Usa o novo texto da imagem image_4af621.png */}
-                <span className="text-yellow-500 block text-xl sm:text-3xl md:text-5xl">à Comunidade de Elite</span>
+                <span className="text-yellow-500 block text-xl sm:text-3xl md:text-5xl">AO CÍRCULO PROIBIDO</span>
               </h1>
               
               {/* Subtítulo (Ajustado com novo texto) */}
               <p className="text-base sm:text-xl md:text-2xl text-muted-foreground mb-6 sm:mb-8 max-w-3xl mx-auto px-2">
-                Não perca a chance de entrar no grupo mais seletivo e com mais crescimento.
+                Você está a um clique do conteúdo que NUNCA VAZARÁ. Garanta sua entrada VIP agora!.
                 <br />
-                <span className="text-red-600 font-bold text-2xl sm:text-3xl block mt-2">Sua transformação começa agora</span>
+                <span className="text-red-600 font-bold text-2xl sm:text-3xl block mt-2">O PREÇO VAI SUBIR em instantes!</span>
               </p>
 
               {/* Carrossel Visual - CORRIGIDO O ERRO DE FECHAMENTO AQUI */}
