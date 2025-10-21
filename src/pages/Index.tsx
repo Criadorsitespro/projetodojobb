@@ -160,7 +160,7 @@ const Index = () => {
                   <span className="line-through">De: R$297,00</span>
                 </div>
                 <div className="text-4xl sm:text-6xl md:text-8xl font-black text-primary animate-pulse mb-3 sm:mb-4">
-                  R$29,90
+                  R$19,90
                 </div>
                 <div className="text-secondary text-base sm:text-xl font-bold animate-bounce">
                   💣 Promoção Relâmpago – O tempo está acabando!
@@ -238,7 +238,7 @@ const Index = () => {
             <Card className="bg-gradient-to-r from-secondary/40 via-card to-secondary/40 p-6 sm:p-8 md:p-12 border-2 sm:border-4 border-primary/70 backdrop-blur-sm text-center">
               <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-6xl font-black text-foreground mb-6 sm:mb-8 leading-tight px-2">
                 ✨ Essa oferta exclusiva de{" "}
-                <span className="text-primary">R$29,90</span>{" "}
+                <span className="text-primary">R$19,90</span>{" "}
                 não vai durar para sempre!
               </h2>
               <p className="text-base sm:text-xl md:text-2xl lg:text-3xl text-muted-foreground mb-8 sm:mb-10 md:mb-12 leading-relaxed px-2">
